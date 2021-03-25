@@ -99,6 +99,7 @@ const addNumbers = (num, arr, times, callback) => {
     callback(arr,num);
     
   }
+}
 
 /* ------------------------------------------------------------------------------------------------
 
@@ -122,10 +123,10 @@ const createList = (availableItems) => {
   let grocerylist = [];
   availableItems.forEach((element) => {
     if(element.available){
-      grocerylst.push(element.name);
+      grocerylist.push(element.name);
     }
   });
-  return grocerylst;
+  return grocerylist;
 };
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
@@ -142,7 +143,12 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  arr.forEach((num)=> {
+    if (num/3){
+      return Fizz
+    }
+  }
+    
 };
 
 /* ------------------------------------------------------------------------------------------------
