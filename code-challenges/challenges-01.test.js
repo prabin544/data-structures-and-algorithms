@@ -26,7 +26,12 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 ------------------------------------------------------------------------------------------------ */
 
 const addExclamation = (arr) => {
-  // Solution code here...
+  const newStrArr = [];
+  arr.forEach(str => {
+    newStrArr.push(`${str}!`)
+    
+  });
+  return newStrArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -38,7 +43,12 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 ------------------------------------------------------------------------------------------------ */
 
 const allUpperCase = (arr) => {
-  // Solution code here...
+  const newStrArr = [];
+  arr.forEach(str => {
+    newStrArr.push(`${str}`.toUpperCase())
+    
+  });
+  return newStrArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,11 +62,16 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-  // Solution code here...
+  return `${word.toUpperCase()}!`;
 };
 
 const speaker = (words, callback) => {
-  // Solution code here...
+  const newStrArr = [];
+  words.forEach(word => {
+    newStrArr.push(callback(word))
+    
+  });
+  return newStrArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -76,12 +91,14 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
-};
+  for (let i = 0; i < times; i++) {
+    callback(arr,num);
+    
+  }
 
 /* ------------------------------------------------------------------------------------------------
 
