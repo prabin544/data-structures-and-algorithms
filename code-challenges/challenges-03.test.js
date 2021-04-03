@@ -22,10 +22,8 @@ Write a function named typeNum that, given an array as input, uses filter to ret
 For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
-const typeNum = (arr) => {
-  // Solution code here...
-};
-
+const typeNum = arr => arr.filter(element => (typeof element) === 'number')
+  
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -35,7 +33,7 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
 const containsAnd = (arr) => {
-  // Solution code here...
+  return arr.filter( str => str.includes('and'));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -47,7 +45,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  // Solution code here...
+  return arr.filter( oddNum => oddNum % 2 != 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,7 +57,7 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+  return arr.filter(num => !forbiddenValues.includes(num));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -101,9 +99,7 @@ const snorlaxData = {
   weight: 4600,
 };
 
-const getBaseStatGreaterThan = (arr, minBaseStat) => {
-  // Solution code here...
-};
+const getBaseStatGreaterThan = (arr, minBaseStat) => arr.filter(stat => stat.basestat > minBaseStat);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
@@ -250,7 +246,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return an array containing the stats that are greater than the input', () => {
     expect(getBaseStatGreaterThan(snorlaxData.stats, 75)).toStrictEqual([ { stat: { url: 'https://pokeapi.co/api/v2/stat/5/', name: 'special-defense' }, effort: 2, baseStat: 110 } ]);
     expect(getBaseStatGreaterThan(snorlaxData.stats, 75).length).toStrictEqual(1);
