@@ -99,6 +99,7 @@ const addNumbers = (num, arr, times, callback) => {
     callback(arr,num);
     
   }
+  return arr
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -142,14 +143,14 @@ Iterate over the array using forEach to determine the output based on several ru
 Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
-const fizzbuzz = (arr) => {
-  arr.forEach((num)=> {
-    if (num/3){
-      return Fizz
-    }
-  }
+// const fizzbuzz = (arr) => {
+//   arr.forEach((num)=> {
+//     if (num/3){
+//       return Fizz
+//     }
+//   }
     
-};
+// };
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
