@@ -116,11 +116,7 @@ const characters = [
   },
 ];
 
-const getHouses = (arr) => {
-  let houses = [];
-  // Solution code here...
-  return houses;
-};
+const getHouses = arr => arr.map(char => char.house)
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -135,8 +131,12 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
-
+ for (let obj of arr){
+   if (Object.values(obj).includes(character)){
+     return obj.children && obj.children.length;
+   }
+ }
+ return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
