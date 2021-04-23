@@ -24,9 +24,7 @@ const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningT
   finalExam: true
 };
 
-const getCourseKeys = (obj) => {
-  // Solution code here...
-};
+const getCourseKeys = (obj) => Object.keys(obj);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -37,7 +35,11 @@ Write a function named checkValues that takes in an object and a value and retur
 ------------------------------------------------------------------------------------------------ */
 
 const checkValues = (obj, value) => {
-  // Solution code here...
+  if (Object.values(obj)[0] === value){
+    return true;
+  } else {
+    return false
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -114,11 +116,7 @@ const characters = [
   },
 ];
 
-const getHouses = (arr) => {
-  let houses = [];
-  // Solution code here...
-  return houses;
-};
+const getHouses = arr => arr.map(char => char.house)
 
 /*------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -133,8 +131,12 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
-
+ for (let obj of arr){
+   if (Object.values(obj).includes(character)){
+     return obj.children && obj.children.length;
+   }
+ }
+ return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
