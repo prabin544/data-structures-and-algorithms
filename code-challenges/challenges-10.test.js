@@ -8,7 +8,9 @@ Write a function named returnTen, takes in a string and uses split and splice to
 ------------------------------------------------------------------------------------------------ */
 
 function returnTen(str){
-  // Solution code here...
+  const split = str.split('');
+  const splice = split.splice(-10);
+  return splice;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -72,8 +74,15 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
-
+  let ans = [];
+  for (let j = 0; j < stores[0].length; j++){
+    let total = 0;
+    for (let i = 0; i< stores.length; i++){
+      total += stores[i][j];
+    }
+    ans.push(total);
+  }
+  return ans;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -87,7 +96,9 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  let ans = [];
+  hours.forEach((hour, index)=>ans.push({sales: `${data[index]} cookies`, time:hour}))
+  return ans
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -112,7 +123,7 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  return arr[2].items[1].quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
