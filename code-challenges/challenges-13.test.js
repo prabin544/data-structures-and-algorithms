@@ -23,10 +23,11 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 const firstLetters = (arr) => {
   let newArr = []
   for (let i = 0; i < arr.length; i++) {
-    newArr.push(i.charAt(0))
+    newArr.push(arr[i].charAt(0))
   }
   return newArr
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
