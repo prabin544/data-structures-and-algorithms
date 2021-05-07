@@ -47,7 +47,13 @@ For example:
 return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
-  // Solution code here...
+  let value = 0;
+  for (let i in matrix){
+    for (let j in matrix[i]){
+      value += matrix[i][j];
+    }
+  }
+  return value;
 };
 
 

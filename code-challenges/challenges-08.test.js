@@ -73,9 +73,7 @@ Write a function named containsW that takes in a string. This function should us
 
 ------------------------------------------------------------------------------------------------ */
 
-const containsW = (str) => {
-  // Solution code here...
-};
+const containsW = (str) => /w/.test(str);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -89,9 +87,7 @@ For example:
 'hello world' returns false
 ------------------------------------------------------------------------------------------------ */
 
-const isNum = (input) => {
-  // Solution code here...
-};
+const isNum = (input) => /[0-9]/.test(input);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -100,9 +96,7 @@ Write a function named containsWorld that takes in a string or number of any len
 
 ------------------------------------------------------------------------------------------------ */
 
-const containsWorld = (input) => {
-  // Solution code here...
-};
+const containsWorld = (input) => /world/.test(input);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -112,9 +106,7 @@ Write a function named isCapitalized that takes in a string. This function shoul
 Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
-const isCapitalized = (str) => {
-  // Solution code here...
-};
+const isCapitalized = (str) => [...str.matchAll(/\b[A-Z]\w*\b/g)].map(items => items[0]);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6
@@ -122,9 +114,7 @@ CHALLENGE 6
 Write a function named citiesAtoJ that takes in an array of city names and uses a regular expression pattern to return a new array containing any cities that begin with the letters A through J, inclusive.
 ------------------------------------------------------------------------------------------------ */
 
-const citiesAtoJ = (arr) => {
-  // Solution code here...
-};
+const citiesAtoJ = (arr) => arr.filter(item => /^[A-J]/g.test(item));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
