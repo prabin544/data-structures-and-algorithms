@@ -11,7 +11,8 @@ Write a function named screenForNames that takes in an array of strings and uses
 ------------------------------------------------------------------------------------------------ */
 
 const screenForNames = (arr) => {
-  // Solution code here...
+  let x =/^(Mr\.|Mrs\.|Ms\.|Dr\.).\w*$/;
+  return arr.filter((y) => y.match(x));
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -22,9 +23,7 @@ Write a function named toTitleCase that takes in an array of strings and returns
 For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyver'].
 ------------------------------------------------------------------------------------------------ */
 
-const toTitleCase = (arr) => {
-  // Solution code here...
-};
+const toTitleCase = (arr) => arr.map(word => word[0].toUpperCase() + word.substring(1));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -98,7 +97,7 @@ let starWarsData = [{
 }];
 
 let biggerThanLuke = (arr) => {
-  // Solution code here...
+  return arr.filter((x) => x.mass > 77).map((x) => x.name).join(' - ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -116,7 +115,9 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
+  return arr.sort((a, b) => {
+    return a[property] > b[property] ? 1: -1;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -132,7 +133,7 @@ https://secure.com returns true because the URL is secure
 https:/missingslash.org returns false because the URL is malformed
 ------------------------------------------------------------------------------------------------ */
 const isSecure = (url) => {
-  // Solution code here...
+  return /^(https:\/\/)/.test(url);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -155,7 +156,20 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+  const check = (row1, col1, row2, col2, row3, col3) => {
+    return board[row1][col1] !== '' &&
+      board[row1][col1] === board[row2][col2] &&
+    board[row2][col2] === board[row3][col3];
+  };
+  if (check(0, 0, 0, 1, 0, 2)) return true;
+  if (check(1, 0, 1, 1, 1, 2)) return true;
+  if (check(2, 0, 2, 1, 2, 2)) return true;
+  if (check(0, 0, 1, 0, 2, 0)) return true;
+  if (check(0, 1, 1, 1, 2, 1)) return true;
+  if (check(0, 2, 1, 2, 2, 2)) return true;
+  if (check(0, 0, 1, 1, 2, 2)) return true;
+  if (check(0, 2, 1, 1, 2, 0)) return true;
+  return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
