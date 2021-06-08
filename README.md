@@ -12,4 +12,4 @@ Each day, you'll add one new file to this folder to do your work for the day's a
 
 ### 401 Data Structures, Code Challenges
 
-- [Code Challenge: Class 01](https://github.com/prabin544/data-structures-and-algorithms/tree/main/code-challenges/python/array-reverse)
+- [Reverse Array: Class 01](https://github.com/prabin544/data-structures-and-algorithms/tree/main/code-challenges/python/array-reverse)
