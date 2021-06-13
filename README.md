@@ -5,3 +5,4 @@
 ###  Code Challenge
 
 - [Reverse Array: Class 01](https://github.com/prabin544/data-structures-and-algorithms/tree/main/code-challenges/python/array-reverse)
+- [ShiftArray: Class 02](https://github.com/prabin544/data-structures-and-algorithms/blob/main/code-challenges/python/array-shift/README.md)
