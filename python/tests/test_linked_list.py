@@ -62,3 +62,9 @@ def test_seven():
     actual = str(ll1)
     expected = "{'d'} ->{'c'} ->{'b'} ->{'a'} -> None "
     assert actual == expected
+
+# kth_value_is_negative
+def kth_value_is_negative():
+    new_linkedlist = LinkedList()
+    new_linkedlist.count < 0
+    assert "Input is negative number"
