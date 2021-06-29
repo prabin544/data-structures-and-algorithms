@@ -23,7 +23,7 @@
 I worked on the Code Challenge with Daniel Dills
 
 ### Code Challenge 8
-Worked with Kevin, Garfield on the Code Challenge.
+Worked with Kevin, Garfield and Anthony (TA) on the Code Challenge.
 
 ![Alt text](assets/challenge8.PNG?raw=true "directory") 
 
