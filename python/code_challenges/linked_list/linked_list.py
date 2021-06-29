@@ -16,6 +16,22 @@ class LinkedList:
         self.head = node
         return self
 
+    def append(self, value):
+
+        node = Node(value)
+        
+        if self.head is None:
+            self.head = node
+            return
+
+        last = self.head
+
+        while (last.next):
+            last = last.next
+
+        last.next = node
+        return last
+
     def includes(self, value):
 
         current = self.head
