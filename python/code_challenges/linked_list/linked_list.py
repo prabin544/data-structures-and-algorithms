@@ -16,21 +16,15 @@ class LinkedList:
         self.head = node
         return self
 
-    def append(self, value):
-
-        node = Node(value)
-        
+    def append(self,value):
+        new_node = Node(value)
         if self.head is None:
-            self.head = node
-            return
-
-        last = self.head
-
-        while (last.next):
-            last = last.next
-
-        last.next = node
-        return last
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next != None:
+                current = current.next
+            current.next = new_node
 
     def includes(self, value):
 
@@ -55,6 +49,19 @@ class LinkedList:
         string += f" None "
 
         return string
+
+def zip_lists(ll1, ll2):
+    curr_1 = ll1.head
+    curr_2 = ll2.head
+    while curr_1 and curr_2:
+        list_1_next = curr_1.next
+        list_2_next = curr_2.next
+        curr_1.next = curr_2
+        curr_2.next = list_1_next
+        curr_1 = list_1_next
+        curr_2 = list_2_next
+    ll2.head = curr_2
+    return ll1
 
 if __name__ == "__main__":
 

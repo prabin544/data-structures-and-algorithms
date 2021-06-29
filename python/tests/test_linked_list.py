@@ -1,4 +1,4 @@
-from code_challenges.linked_list.linked_list import LinkedList, Node
+from code_challenges.linked_list.linked_list import LinkedList, Node, zip_lists
 
 def test_a():
     node1 = Node("apple")
@@ -64,10 +64,30 @@ def test_seven():
     assert actual == expected
 
 # appends value to last head
-def test_eight():
-    ll1 = LinkedList()
-    ll1.append("a")
-    ll1.append("b")
-    actual = ll1.head.value
-    expected = "b"
+def test_append_to_end():
+    new_list = LinkedList(Node('1',Node('3',Node('2'))))
+    new_list.append('5')
+    actual= new_list.__str__()
+    expected = "{'1'} ->{'3'} ->{'2'} ->{'5'} -> None "
     assert actual == expected
+
+# merges two linked list
+def test_nine():
+    ll1 = LinkedList()
+    ll2 = LinkedList()
+
+    ll1.append(1)
+    ll1.append(3)
+    ll1.append(2)
+
+    ll2.append(5)
+    ll2.append(9)
+    ll2.append(4)
+
+    zipped_list = zip_lists(ll1, ll2)
+
+    actual = str(zipped_list)
+    expected = "{1} ->{5} ->{3} ->{9} ->{2} ->{4} -> None "
+    assert actual == expected
+
+
