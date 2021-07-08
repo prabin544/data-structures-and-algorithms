@@ -3,10 +3,10 @@ class Node:
         self.value = value
         self.next = next
 
-# class Queues:
-#     def __init__(self, node = None):
-#         self.front = node
-#         self.rear = node
+class Queues:
+    def __init__(self, front=None):
+        self.front = front
+
 
 #     def enqueue(self, value):
 #         node = Node(value)
