@@ -28,23 +28,3 @@ class Stack:
         return self.top == None
 
 
-
-
-
-#         if self.top is None:
-#             raise Exception("Stack is empty")
-#         popped = self.top.value
-#         self.top = self.top.next
-#         return popped
-
-#     def peek(self):
-
-#         if self.top is None:
-#             raise Exception("Stack is empty")
-#         return self.top.value
-
-#     def isEmpty(self):
-#         return self.top == None
-
-# if __name__ == "__main__":
-#     pass

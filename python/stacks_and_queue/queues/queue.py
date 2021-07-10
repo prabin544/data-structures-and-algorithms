@@ -4,38 +4,37 @@ class Node:
         self.next = next
 
 class Queues:
-    def __init__(self, front=None):
+    def __init__(self, front=None, rear= None):
         self.front = front
+        self.rear = rear
 
 
-#     def enqueue(self, value):
-#         node = Node(value)
-#         if self.front is None:
-#             self.front = node
-#             self.rear = node
-#             return self
+    def enqueue(self, value):
+        node = Node(value)
+        if self.front is None:
+            self.front = node
+            self.rear = node
+        else:
+            self.rear.next = node
+            self.rear = node
 
-#         self.rear.next = node
-#         self.rear = node
-#         return self
+    def dequeue(self):
 
-#     def dequeue(self):
+        if self.front is None:
+            raise Exception("Queue is empty")
 
-#         if self.front is None:
-#             raise Exception("Queue is empty")
+        dequed = self.front.value
+        self.front = self.front.next
+        return dequed
 
-#         dequed = self.front.value
-#         self.front = self.front.next
-#         return dequed
+    def peek(self):
+        if self.front is None:
+            raise Exception("Queue is empty")
 
-#     def peek(self):
-#         if self.front is None:
-#             raise Exception("Queue is empty")
+        return self.front.value
 
-#         return self.front.value
+    def isEmpty(self):
+        return self.front == None
 
-#     def isEmpty(self):
-#         return self.front == None
-
-#     if __name__ == "__main__":
-#         pass
+    if __name__ == "__main__":
+        pass
