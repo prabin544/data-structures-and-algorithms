@@ -63,7 +63,6 @@ def test_seven():
     expected = "{'d'} ->{'c'} ->{'b'} ->{'a'} -> None "
     assert actual == expected
 
-# appends value to last head
 def test_append_to_end():
     new_list = LinkedList(Node('1',Node('3',Node('2'))))
     new_list.append('5')
@@ -89,5 +88,4 @@ def test_nine():
     actual = str(zipped_list)
     expected = "{1} ->{5} ->{3} ->{9} ->{2} ->{4} -> None "
     assert actual == expected
-
 
