@@ -12,5 +12,7 @@ Feature Tasks
       - pref can be either "dog" or "cat"
       - Return: either a dog or a cat, based on preference.
         - If pref is not "dog" or "cat" then return null.
+
+[](https://github.com/prabin544/data-structures-and-algorithms/blob/main/python/code_challenges/assets/Animal%20shelter.PNG)
         
  #### Collaborators
