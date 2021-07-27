@@ -24,6 +24,7 @@ def test_binary_tree_has_root():
 def test_create_binary_search_tree():
     tree = BinarySearchTree()
     assert tree
+
 def test_add_iteravily_will_add_to_tree():
     tree = BinarySearchTree()
     tree.addIteravily(10)
@@ -33,11 +34,11 @@ def test_add_iteravily_will_add_to_tree():
     assert tree.root.right.value == 15
     assert tree.root.left.value == 5
 
-def test_add_recursively_will_add_to_tree():
+def test_add_iteravily_will_add_to_tree():
     tree = BinarySearchTree()
-    tree.addRecursively(10)
-    tree.addRecursively(15)
-    tree.addRecursively(5)
+    tree.addIteravily(10)
+    tree.addIteravily(15)
+    tree.addIteravily(5)
     assert tree.root.value == 10
     assert tree.root.right.value == 15
     assert tree.root.left.value == 5
@@ -55,10 +56,17 @@ def test_in_order_will_return_correct_values(new_tree):
     actual = new_tree.in_order()
     expected = [12, 15, 17, 20, 23, 25, 28]
     assert actual == expected
+
+def test_max_value_will_return_max_int(new_tree):
+    actual = new_tree.max_value()
+    expected = 28
+    assert actual == expected
+
 def test_post_order_will_return_correct_values(new_tree):
     actual = new_tree.post_order()
     expected = [12, 17, 15, 23, 28, 25, 20]
     assert actual == expected
+    
 def test_contains_method_will_return_true_for_present_value(new_tree):
     actual = new_tree.containsIteravily(23)
     assert actual == True
