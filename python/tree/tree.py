@@ -32,6 +32,7 @@ class BinaryTree:
                 walk(node.right)
         walk(self.root)
         return result
+        
     def post_order(self):
         # left >> right >> root
         result = []
@@ -43,6 +44,17 @@ class BinaryTree:
             result.append(node.value)
         walk(self.root)
         return result
+
+    def max_value(self):
+        result = []
+        def walk(node):
+            if node:
+                walk(node.left)
+                result.append(node.value)
+                walk(node.right)
+        walk(self.root)
+        return max(result)
+
 class BinarySearchTree(BinaryTree):
     """
     Docstring
