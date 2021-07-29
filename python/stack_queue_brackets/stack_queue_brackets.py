@@ -1,21 +1,21 @@
-open_brackets = ["[", "{", "("]
-closed_brackets = ["]", "}", ")"]
+openBrackets = ["[", "{", "("]
+closedBrackets = ["]", "}", ")"]
 
 def validate_brackets(str):
-    stack = []
+    new_stack = []
     for i in str:
-        if i in open_brackets:
-            stack.append(i)
-        elif i in closed_brackets:
-            brackets = closed_brackets.index(i)
-            if ((len(stack) > 0) and (open_brackets[brackets] == stack[len(stack) -1])):
-                stack.pop()
+        if i in openBrackets:
+            new_stack.append(i)
+        elif i in closedBrackets:
+            brackets = closedBrackets.index(i)
+            if ((len(new_stack) > 0) and (openBrackets[brackets] == new_stack[len(new_stack) -1])):
+                new_stack.pop()
             else:
-                return False, "Unbalanced"
-    if len(stack) == 0:
-        return True, "Balanced"
+                return False, "Unbalanced Brackets"
+    if len(new_stack) == 0:
+        return True, "Balanced Brackets"
     else:
-        return False, "Unbalanced"
+        return False, "Unbalanced Brackets"
 # Brackets = {
 #      "{" : "}",
 #      "(" : ")",
