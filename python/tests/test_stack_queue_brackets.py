@@ -1,41 +1,91 @@
 import pytest
-from stack_queue_brackets.stack_queue_brackets import Node, Stack
-
-def test_new_node():
-    new_node = Node(5)
-    actual = new_node.value
-    expected = 5
-    assert actual == expected
+from stack_queue_brackets.stack_queue_brackets import validate_brackets
 
 def test_case_one():
-    new_stack = Stack()
-    #new_stack.validate_brackets("{}")
-    assert new_stack.validate_brackets("{}") == True
+    actual = validate_brackets("{}")
+    expected = (True, "Balanced")
+    assert actual == expected
 
 def test_case_two():
-    new_stack = Stack()
-    #new_stack.validate_brackets("{}(){}")
-    assert new_stack.validate_brackets("{}(){}") == True
+    actual = validate_brackets("{}(){}")
+    expected = (True, "Balanced")
+    assert actual == expected
 
 def test_case_three():
-    new_stack = Stack()
-    #new_stack.validate_brackets("()[[Extra Characters]]")
-    assert new_stack.validate_brackets("()[[Extra Characters]]") == True
+    actual = validate_brackets("()[[Extra Characters]]")
+    expected = (True, "Balanced")
+    assert actual == expected
 
 def test_case_four():
-    new_stack = Stack()
-    #new_stack.validate_brackets("(){}[[]]")
-    assert new_stack.validate_brackets("(){}[[]]") == True
+    actual = validate_brackets("(){}[[]]")
+    expected = (True, "Balanced")
+    assert actual == expected
 
 def test_case_five():
-    new_stack = Stack()
-    #new_stack.validate_brackets("{}{Code}[Fellows](())")
-    assert new_stack.validate_brackets("{}{Code}[Fellows](())") == True
+    actual = validate_brackets("{}{Code}[Fellows](())")
+    expected = (True, "Balanced")
+    assert actual == expected
 
 def test_case_six():
-    new_stack = Stack()
-    #new_stack.validate_brackets("[({}]")
-    assert new_stack.validate_brackets("[({}]") == False
+    actual = validate_brackets("[({}]")
+    expected = (False, "Unbalanced")
+    assert actual == expected
+
+def test_case_seven():
+    actual = validate_brackets("(](")
+    expected = (False, "Unbalanced")
+    assert actual == expected
+
+def test_case_eight():
+    actual = validate_brackets("{(})")
+    expected = (False, "Unbalanced")
+    assert actual == expected
+
+def test_case_nine():
+    actual = validate_brackets("")
+    expected = (True, "Balanced")
+    assert actual == expected
+
+def test_case_ten():
+    actual = validate_brackets("daniel")
+    expected = (True, "Balanced")
+    assert actual == expected
+
+# def test_new_node():
+#     new_node = Node(5)
+#     actual = new_node.value
+#     expected = 5
+#     assert actual == expected
+
+# def test_case_one():
+#     new_stack = Stack()
+#     #new_stack.validate_brackets("{}")
+#     assert new_stack.validate_brackets("{}") == True
+
+# def test_case_two():
+#     new_stack = Stack()
+#     #new_stack.validate_brackets("{}(){}")
+#     assert new_stack.validate_brackets("{}(){}") == True
+
+# def test_case_three():
+#     new_stack = Stack()
+#     #new_stack.validate_brackets("()[[Extra Characters]]")
+#     assert new_stack.validate_brackets("()[[Extra Characters]]") == True
+
+# def test_case_four():
+#     new_stack = Stack()
+#     #new_stack.validate_brackets("(){}[[]]")
+#     assert new_stack.validate_brackets("(){}[[]]") == True
+
+# def test_case_five():
+#     new_stack = Stack()
+#     #new_stack.validate_brackets("{}{Code}[Fellows](())")
+#     assert new_stack.validate_brackets("{}{Code}[Fellows](())") == True
+
+# def test_case_six():
+#     new_stack = Stack()
+#     #new_stack.validate_brackets("[({}]")
+#     assert new_stack.validate_brackets("[({}]") == False
 
 
 # def test_case_seven():
