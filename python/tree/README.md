@@ -21,5 +21,19 @@ Can successfully return a collection from a preorder traversal
 Can successfully return a collection from an inorder traversal  
 Can successfully return a collection from a postorder traversal  
 
+### Challenge Setup & Execution (Challenge 16)
+Branch Name: tree-max
+
+Challenge Type: Extending an Implementation
+
+Feature Tasks
+Write the following method for the Binary Tree class
+
+- find maximum value
+ - Arguments: none
+ - Returns: number
+
+![screenshot](https://github.com/prabin544/data-structures-and-algorithms/blob/tree-max/python/code_challenges/assets/max_value_binary_tree.png)
+
 ### Collaborators 
 Davee, Daniel, Wondwosen 

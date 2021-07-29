@@ -62,6 +62,11 @@ def test_max_value_will_return_max_int(new_tree):
     expected = 28
     assert actual == expected
 
+def test_max_value_will_return_max_int(new_tree):
+    actual = new_tree.max_value()
+    expected = 12
+    assert actual != expected    
+
 def test_post_order_will_return_correct_values(new_tree):
     actual = new_tree.post_order()
     expected = [12, 17, 15, 23, 28, 25, 20]
