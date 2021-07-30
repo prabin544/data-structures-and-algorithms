@@ -1,4 +1,4 @@
-from tree.tree_breadth_first import breadthFirst
+from tree_breadth_first.tree_breadth_first import breadthFirst
 import pytest
 from stacks_and_queue.queues.queue import Queues
 from tree.tree import BinarySearchTree, BinaryTree, Node
