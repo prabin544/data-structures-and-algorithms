@@ -19,6 +19,14 @@
 -Will return false when searching for a value in the linked list that does not exist
  - Can properly return a collection of all the values that exist in the linked list
 
+### Code Challenge 7
+Write the following method for the Linked List class:
+
+- kth from end
+  - argument: a number, k, as a parameter.
+  - Return the node’s value that is k places from the tail of the linked list.
+  - You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+  - 
 ### Collaborations & Credit  
 I worked on the Code Challenge with Daniel Dills
 
