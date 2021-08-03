@@ -6,8 +6,8 @@ class Node:
 
 class LinkedList:
 
-    def __init__(self, node=None):
-        self.head = node
+    def __init__(self, head=None):
+        self.head = head
 
     def insert(self, value):
 
@@ -40,24 +40,28 @@ class LinkedList:
 
         return string
 
-    def kth_from_end(self, k):
-        list_head = self.head
-        count = 0
-        while list_head != None:
-           list_head = list_head.next
-           count += 1
-        if k > count:
-            print("Out of Range")
-        elif k == count:
-            print("Same Length")
-        elif k < 0:
-            print("negative Number")
-        elif k == self:
-            print("Linked list needs to be greater than 1")
-        list_head = self.head
-        for i in range(0, count - k):
-            list_head = list_head.next
-        return list_head.value
+# https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/
+    def kthFromEnd(self, k):
+        temp = self.head
+        length = 0
+
+        while temp is not None:
+            temp = temp.next
+            length += 1
+
+        #print count
+        if k > length: # if entered location is greater than length of LL
+            return 'Location is greater than the length of LL'
+        if k == length:
+            return 'Same length'
+        if k < 0:
+            return 'Negative numbers not allowed'
+
+        temp = self.head
+        for i in range(1, length - k):
+            temp = temp.next
+
+        return temp.value
 
 
 if __name__ == "__main__":
