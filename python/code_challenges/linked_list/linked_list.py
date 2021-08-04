@@ -6,8 +6,8 @@ class Node:
 
 class LinkedList:
 
-    def __init__(self, node=None):
-        self.head = node
+    def __init__(self, head=None):
+        self.head = head
 
     def insert(self, value):
 
@@ -15,16 +15,6 @@ class LinkedList:
         node.next = self.head
         self.head = node
         return self
-
-    def append(self,value):
-        new_node = Node(value)
-        if self.head is None:
-            self.head = new_node
-        else:
-            current = self.head
-            while current.next != None:
-                current = current.next
-            current.next = new_node
 
     def includes(self, value):
 
@@ -50,18 +40,29 @@ class LinkedList:
 
         return string
 
-def zip_lists(ll1, ll2):
-    curr_1 = ll1.head
-    curr_2 = ll2.head
-    while curr_1 and curr_2:
-        list_1_next = curr_1.next
-        list_2_next = curr_2.next
-        curr_1.next = curr_2
-        curr_2.next = list_1_next
-        curr_1 = list_1_next
-        curr_2 = list_2_next
-    ll2.head = curr_2
-    return ll1
+# https://www.geeksforgeeks.org/nth-node-from-the-end-of-a-linked-list/
+    def kthFromEnd(self, k):
+        temp = self.head
+        length = 0
+
+        while temp is not None:
+            temp = temp.next
+            length += 1
+
+        #print count
+        if k > length: # if entered location is greater than length of LL
+            return 'Location is greater than the length of LL'
+        if k == length:
+            return 'Same length'
+        if k < 0:
+            return 'Negative numbers not allowed'
+
+        temp = self.head
+        for i in range(1, length - k):
+            temp = temp.next
+
+        return temp.value
+
 
 if __name__ == "__main__":
 
