@@ -13,4 +13,4 @@
 ### Collaborators
 Davee, Daniel, Wondwose, Michael
 
-![ScreenShot]()
+![ScreenShot](https://github.com/prabin544/data-structures-and-algorithms/blob/tree-fizz-buzz/python/code_challenges/assets/fizz_buzz_tree.jpg)
