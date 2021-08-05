@@ -10,7 +10,7 @@
 - If the value is divisible by 3 and 5, replace the value with “FizzBuzz”
 - If the value is not divisible by 3 or 5, simply turn the number into a String.
 
+![ScreenShot](https://github.com/prabin544/data-structures-and-algorithms/blob/tree-fizz-buzz/python/code_challenges/assets/fizz_buzz_tree.jpg)  
+
 ### Collaborators
 Davee, Daniel, Wondwose, Michael
-
-![ScreenShot](https://github.com/prabin544/data-structures-and-algorithms/blob/tree-fizz-buzz/python/code_challenges/assets/fizz_buzz_tree.jpg)
