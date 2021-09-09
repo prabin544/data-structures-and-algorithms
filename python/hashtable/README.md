@@ -1,6 +1,6 @@
 # Hashtables
 <!-- Short summary or background information -->
-Author: Daniel Dills
+Author: Prabin Singh
 
 ## Challenge
 <!-- Description of the challenge -->
