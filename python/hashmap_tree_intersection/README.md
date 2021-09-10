@@ -17,7 +17,7 @@ Return: array
 
 ## Whiteboard image
 
-[Whiteboard Image](/home/wonde/codefellows/code-401/data-structures-and-algorithms/python/code_challenges/images/HashmaptreeIntersection-Whiteboard.jpg)
+[Whiteboard Image](https://github.com/prabin544/data-structures-and-algorithms/blob/main/python/hashmap_tree_intersection/HashmaptreeIntersection%20Whiteboard.jpg)
 
 ## Collaboration
 
