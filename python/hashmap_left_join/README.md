@@ -15,4 +15,4 @@ Write a function that LEFT JOINs two hashmaps into a single data structure.
 ![Screenshot](https://github.com/prabin544/data-structures-and-algorithms/blob/hashmap-left-join/python/hashmap_left_join/left_join.jpg)
 
 ### Collaborator
-Daniel, Wondee, Davee
+Daniel, Wondewosen, Davee
